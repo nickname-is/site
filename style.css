@@ -132,6 +132,7 @@ img {
     visibility: hidden;
     transition: all .8s ease;
     z-index: 1;
+    overflow: auto;
 }
 
 .popup__body {
@@ -139,7 +140,6 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px 10px;
 }
 
 .popup__area {
@@ -159,6 +159,7 @@ img {
     transition: all .8s ease;
     transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
     z-index: 1;
+    margin: 15px 15px;
 }
 
 .popup__close {
