@@ -4,6 +4,22 @@ let isClick = false;
 
 let cards = document.getElementsByClassName("card");
 
+const btnDarkMode = document.querySelector(".dark-mode-btn");
+
+if (localStorage.getItem("darkMode") === "dark") {
+    document.body.classList.add("dark");
+}
+
+btnDarkMode.addEventListener("click", () => {
+    const isDark = document.body.classList.toggle("dark");
+
+    if (isDark) {
+        localStorage.setItem("darkMode", "dark");
+    } else {
+        localStorage.setItem("darkMode",  "light");
+    }
+})
+
 for (i = 0; i < cards.length; i++) {
     if ((i % 2) == 0) {
         cards[i].style.animation = `odd 1s forwards ${i * 0.2}s`;
