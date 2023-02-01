@@ -3,13 +3,26 @@
     padding: 0;
 }
 
+:root {
+    --page-bg: #fff;
+    --scrollbar-bg: lightgray;
+    --pagination-color: #000;
+}
+
 html,
 body {
     height: 100%;
 }
 
+.dark {
+    --page-bg: rgb(31, 31, 31);
+    --pagination-color: #fff;
+}
+
 .wrapper {
+    min-height: 100%;
     overflow: hidden;
+    background-color: var(--page-bg);
 }
 
 .container {
@@ -52,6 +65,11 @@ body {
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.card {
+    background-color: #fff;
+}
+
 
 .card:nth-child(odd) {
     transform: translateX(-159%);
@@ -215,6 +233,7 @@ img {
     text-align: center;
     box-shadow: 0 12px 24px 0 rgba(0,0,0,0.2);
     margin-bottom: 60px;
+    background-color: #fff;
 }
 
 .slide__content {
@@ -258,6 +277,11 @@ img {
 
 .swiper-pagination {
     margin-bottom: 15px;
+    color: var(--pagination-color);
+}
+
+.swiper-scrollbar {
+    background-color: var(--scrollbar-bg);
 }
 
 @media screen and (max-width: 1000px){
